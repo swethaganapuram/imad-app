@@ -22,12 +22,12 @@ var articleOne = {
         </p>`
 }
 
-function createTemplet(data){
+function createTemplaet(data){
     var title = data.title;
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
-    var  htmltemplet = `
+    var  htmltemplaet = `
  <html>
     <head>
         <title>
@@ -55,7 +55,7 @@ function createTemplet(data){
     </body>
 </html>
 `;
- return htmlTemplet;
+ return htmlTemplaet;
 }
 
 app.get('/', function (req, res) {
@@ -63,7 +63,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one',function(req,res){
-  res.send(createTemplet(articleOne));
+  res.send(createTemplaet(articleOne));
 });
 
 app.get('/article-two',function(req,res){
